@@ -1,0 +1,123 @@
+package com.Practice;
+//Program of sphere
+class sphere{
+    private int radius;
+    public sphere(){
+        this.radius=5;
+    }
+
+    public sphere(int radius) {
+        this.radius = radius;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+    public double  area(){
+        return   4 * Math.PI * radius * radius;
+    }
+    public double volume(){
+        return 4/3*Math.PI*radius*radius*radius;
+    }
+}
+//program end
+//Program for rect
+class rectangle2 {
+
+    private int length;
+    private int breadth;
+    public rectangle2(){
+        this.length =45;
+        this.breadth=56;
+    }
+
+    public rectangle2(int length, int breadth) {
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getBreadth() {
+        return breadth;
+    }
+
+    public void setBreadth(int breadth) {
+        this.breadth = breadth;
+    }
+    public int area(){
+        return length*breadth;
+    }
+    public int perimeter(){
+        return 2*(length+breadth);
+    }
+}
+//Program end
+// program for cylinder
+class cylinder {
+    public int radius;
+    public int height;
+
+    public cylinder(int radius, int height) {
+        this.radius = radius;
+        this.height = height;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+    public int getHeight() {
+        return height;
+    }
+    public void setHeight(int height) {
+        this.height = height;
+    }
+    public double surfaceArea(){
+      return 2* Math.PI*radius * radius +2*Math.PI*radius*height;
+    }
+    public double volume(){
+        return  Math.PI*radius * radius *height;
+    }
+}
+//Program end
+public class practice3 {
+    public static void main(String[] args) {
+     //program for cylinder
+    cylinder mycylinder =new cylinder(9,12);
+
+    //mycylinder.setHeight(4);
+        System.out.println("Height of the cylinder is: "+ mycylinder.getHeight());
+       // mycylinder.setRadius(8);
+        System.out.println("Radius of the cylinder is: "+mycylinder.getRadius());
+        System.out.println("The surface area of cylinder is :"+ mycylinder.surfaceArea());
+        System.out.println("The Volume of cylinder is :"+ mycylinder.volume());
+        //Program end
+        //program for rec
+        rectangle2 rec = new rectangle2();
+        System.out.println("The Length is " + rec.getLength());
+        System.out.println("The breadth is " + rec.getBreadth());
+        rectangle2 r = new rectangle2(67,65);
+        System.out.println(r.area());
+        System.out.println(r.perimeter());
+        // program end
+        //program of sphere
+        sphere prs = new sphere();
+        sphere spr= new sphere(6);
+        System.out.println(prs.getRadius());
+        System.out.println("The area of spr is:" + spr.area());
+        System.out.println("The Volume of spr is: " + spr.volume());
+        //program end
+    }
+}
