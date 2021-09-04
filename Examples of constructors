@@ -1,0 +1,60 @@
+package com.Practice;
+
+class Base1 {
+    Base1() {
+        System.out.println("i am a constructor");
+    }
+
+    Base1(int x,int c) {
+        System.out.println("i am a overloded of x " + x);
+    }
+
+    public int x;
+    public int c;
+
+    public int getC() {
+        return c;
+    }
+
+    public void setC(int c) {
+        this.c = c;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+}
+     class derived1 extends Base1{
+
+   public void base1(){
+        System.out.println("i am a constructor");
+    }
+        derived1 (){
+            System.out.println("i am not a constructor");
+        }
+        derived1( int x ,int y,int c){
+            super(x,y);
+            System.out.println("i am not a constructor "+ y + c);
+        }
+        public int y;
+
+
+        public int getY() {
+            return y;
+        }
+        public void setY(int y) {
+            this.y = y;
+        }
+
+}
+public class practice4 {
+    public static void main(String[] args) {
+
+       Base1 b = new Base1(32,43);
+        derived1 B = new derived1(87,23,32);
+    }
+}
