@@ -1,0 +1,43 @@
+// Exmaples of java inhertences
+
+package com.Practice;
+class car{
+    public int speed;
+
+    void start(int s){
+        this.speed=s;
+        System.out.println("Strat The car " + s);
+    }
+
+}
+class car2 extends car{
+    public int meter;
+
+    void acc(int m){
+        this.meter=m;
+        System.out.println(" acc the car " + m);
+    }
+}
+class car3 extends car2{
+    void fast(){
+        System.out.println(" fast to the finish");
+    }
+}
+class car4 extends car{
+    void explode(){
+        System.out.println("explode the vehicle");
+    }
+}
+public class Practice5 {
+    public static void main(String[] args) {
+        //program 1
+        car3 audi = new car3();
+        audi.start(23);
+        audi.acc(45);
+        audi.fast();
+        car4 bmw = new car4();
+        bmw.start(45);
+        bmw.explode();
+
+    }
+}
